@@ -45,13 +45,17 @@ and open the template in the editor.
           <div class="panel-body">
               <center>
               <br>
-              <img src="img1.png" style="width: 80%">
+              <img src="pez.jpg" style="width: 80%">
               <br>
               <br>
                <h3>OXIGENO</h3>
-              <button type="button" class="btn btn-primary" onclick="encender()" >ENCENDER</button>
-              <button type="button" class="btn btn-primary" onclick="apagar()" >APAGAR</button>    
-              <br>
+              <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkMotorA" checked>
+              <label class="onoffswitch-label" for="checkMotorA">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+              </label>
+              </div>
               </label>
               </div>
               </center>
@@ -59,8 +63,13 @@ and open the template in the editor.
               <br>
               <center>
                    <h3>DISPENSADOR DE COMIDA</h3>
-               <button type="button" class="btn btn-success" onclick="encender2()">ENCENDER</button>
-              <button type="button" class="btn btn-success" onclick="apagar2()">APAGAR</button>   
+              <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkMotorB" checked>
+              <label class="onoffswitch-label" for="checkMotorB">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+              </label>
+              </div>   
                <br>
               </center>
             </div>
