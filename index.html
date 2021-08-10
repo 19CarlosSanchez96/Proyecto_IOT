@@ -95,19 +95,19 @@ var db = firebase.database().ref('home');
 // último estado
 db.on('value', function(data){
    console.log("data: ", data.val());
-   $("#checkLed1").prop('checked', data.val().led1);
-   $("#checkLed2").prop('checked', data.val().led2);
+   $("#checkLed1").prop('checked', data.val().motor1);
+   $("#checkLed2").prop('checked', data.val().motor2);
 });
-$("#checkLed1").click(function(){
+$("#checkMotor1").click(function(){
   var estado = $(this).is(':checked');
   db.update({
-    led1:estado
+    motor1:estado
   });
 });
-$("#checkLed2").click(function(){
+$("#checkMotor2").click(function(){
   var estado = $(this).is(':checked');
   db.update({
-    led2:estado
+    motor2:estado
   });
 });
   </script>
@@ -124,19 +124,19 @@ var db = firebase.database().ref('home');
 // último estado
 db.on('value', function(data){
    console.log("data: ", data.val());
-   $("#checkLedA").prop('checked', data.val().led1);
-   $("#checkLedB").prop('checked', data.val().led2);
+   $("#checkMotorA").prop('checked', data.val().motor1);
+   $("#checkMotorB").prop('checked', data.val().motor2);
 });
-$("#checkLedA").click(function(){
+$("#checkMotorA").click(function(){
   var estado = $(this).is(':checked');
   db.update({
-    led1:estado
+    motor1:estado
   });
 });
-$("#checkLedB").click(function(){
+$("#checkMotorB").click(function(){
   var estado = $(this).is(':checked');
   db.update({
-    led2:estado
+    motor2:estado
   });
 });
   </script>  
@@ -146,7 +146,7 @@ $("#checkLedB").click(function(){
             {
             var db = firebase.database().ref('home');
             db.update({
-                    led1:true
+                    motor1:true
                   });
             }
     </script>
@@ -155,7 +155,7 @@ $("#checkLedB").click(function(){
             {
             var db = firebase.database().ref('home');
             db.update({
-                    led1:false
+                    motor1:false
                   });
             }
     </script>
@@ -164,7 +164,7 @@ $("#checkLedB").click(function(){
             {
             var db = firebase.database().ref('home');
             db.update({
-                    led2:true
+                    motor2:true
                   });
             }
     </script>
@@ -173,7 +173,7 @@ $("#checkLedB").click(function(){
             {
             var db = firebase.database().ref('home');
             db.update({
-                    led2:false
+                    motor2:false
                   });
             }
     </script>
