@@ -52,7 +52,7 @@ and open the template in the editor.
               <br>
               <br>
               <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLedA" checked>
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkMotorA" checked>
               <label class="onoffswitch-label" for="checkLedA">
               <span class="onoffswitch-inner"></span>
               <span class="onoffswitch-switch"></span>
@@ -67,7 +67,7 @@ and open the template in the editor.
                <br>
               <br>
               <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLedB" checked>
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkMotorB" checked>
               <label class="onoffswitch-label" for="checkLedB">
               <span class="onoffswitch-inner"></span>
               <span class="onoffswitch-switch"></span>
@@ -95,8 +95,8 @@ var db = firebase.database().ref('home');
 // último estado
 db.on('value', function(data){
    console.log("data: ", data.val());
-   $("#checkLed1").prop('checked', data.val().motor1);
-   $("#checkLed2").prop('checked', data.val().motor2);
+   $("#checkNotor1").prop('checked', data.val().motor1);
+   $("#checkMotor2").prop('checked', data.val().motor2);
 });
 $("#checkMotor1").click(function(){
   var estado = $(this).is(':checked');
